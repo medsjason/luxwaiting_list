@@ -71,8 +71,7 @@ function WaitlistForm() {
           Get updates and early access
         </h2>
         <p className="mt-3 text-sm leading-7 text-[#555]">
-          Fill out the form below. Your responses will be sent to Formspree once you connect
-          your form endpoint.
+          Fill out the form below.
         </p>
       </div>
 
