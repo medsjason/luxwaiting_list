@@ -76,7 +76,7 @@ function WaitlistForm() {
       </div>
 
       <form
-        action="https://formspree.io/f/mwvabykl"
+        action="https://formspree.io/f/xeevkned"
         method="POST"
         className="space-y-5"
       >
