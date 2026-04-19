@@ -21,8 +21,8 @@ export default function LuxsalWaitlistPage() {
             </div>
 
             <p className="max-w-2xl text-lg leading-8 text-[#3b3b3b] md:text-xl">
-              Join the Luxsal waitlist for updates and early access. Be among the first to
-              discover a smarter, more trusted resale experience.
+              Join the LUXSAL waitlist for updates and early access. Be among the first to
+              experience a cleaner, more trusted way to buy and sell fashion.
             </p>
 
             <div className="grid gap-4 sm:grid-cols-3">
@@ -31,7 +31,7 @@ export default function LuxsalWaitlistPage() {
                   Trusted
                 </p>
                 <p className="mt-3 text-sm leading-7 text-[#444]">
-                  Built for confident buying and selling.
+                  Built for safer, more confident buying and selling.
                 </p>
               </div>
               <div className="rounded-3xl border border-black/5 bg-white p-5 shadow-sm">
@@ -39,7 +39,7 @@ export default function LuxsalWaitlistPage() {
                   Early Access
                 </p>
                 <p className="mt-3 text-sm leading-7 text-[#444]">
-                  Get launch news and first access before the public release.
+                  Get updates and early access before public launch.
                 </p>
               </div>
               <div className="rounded-3xl border border-black/5 bg-white p-5 shadow-sm">
@@ -47,7 +47,7 @@ export default function LuxsalWaitlistPage() {
                   Community
                 </p>
                 <p className="mt-3 text-sm leading-7 text-[#444]">
-                  Join as an individual seller, brand owner, thrift vendor, or creator.
+                  For buyers, individual sellers, brand owners, and thrift vendors.
                 </p>
               </div>
             </div>
@@ -80,97 +80,108 @@ function WaitlistForm() {
         method="POST"
         className="space-y-5"
       >
+        {/* Role */}
         <div>
-          <label htmlFor="role" className="mb-2 block text-sm font-medium text-[#1a1a1a]">
+          <label className="mb-2 block text-sm font-medium">
             What best describes you? <span className="text-[#c99a31]">*</span>
           </label>
           <select
-            id="role"
-            name="What best describes you"
+            name="Role"
             required
-            className="w-full rounded-2xl border border-[#d6d6d1] bg-[#fafaf8] px-4 py-3 text-sm outline-none transition focus:border-[#c99a31] focus:ring-2 focus:ring-[#c99a31]/20"
+            className="w-full rounded-2xl border border-[#d6d6d1] bg-[#fafaf8] px-4 py-3 text-sm"
             defaultValue=""
           >
-            <option value="" disabled>
-              Select one
-            </option>
-            <option>Individual seller</option>
-            <option>Brand owner</option>
-            <option>Thrift vendor</option>
-            <option>Custom/handmade</option>
+            <option value="" disabled>Select one</option>
+            <option>Buyer</option>
+            <option>Individual Seller</option>
+            <option>Brand Owner</option>
+            <option>Thrift Vendor</option>
+            <option>Custom/Handmade Seller</option>
           </select>
         </div>
 
+        {/* Interest */}
         <div>
-          <label htmlFor="fullName" className="mb-2 block text-sm font-medium text-[#1a1a1a]">
+          <label className="mb-2 block text-sm font-medium">
+            What are you interested in? <span className="text-[#c99a31]">*</span>
+          </label>
+          <select
+            name="Interest"
+            required
+            className="w-full rounded-2xl border border-[#d6d6d1] bg-[#fafaf8] px-4 py-3 text-sm"
+            defaultValue=""
+          >
+            <option value="" disabled>Select one</option>
+            <option>Buying</option>
+            <option>Selling</option>
+            <option>Both</option>
+          </select>
+        </div>
+
+        {/* Name */}
+        <div>
+          <label className="mb-2 block text-sm font-medium">
             Full name <span className="text-[#c99a31]">*</span>
           </label>
           <input
-            id="fullName"
             type="text"
-            name="Full name"
+            name="Full Name"
             required
-            className="w-full rounded-2xl border border-[#d6d6d1] bg-[#fafaf8] px-4 py-3 text-sm outline-none transition focus:border-[#c99a31] focus:ring-2 focus:ring-[#c99a31]/20"
-            placeholder="Enter your full name"
+            className="w-full rounded-2xl border border-[#d6d6d1] bg-[#fafaf8] px-4 py-3 text-sm"
           />
         </div>
 
+        {/* Email */}
         <div>
-          <label htmlFor="email" className="mb-2 block text-sm font-medium text-[#1a1a1a]">
+          <label className="mb-2 block text-sm font-medium">
             Email address <span className="text-[#c99a31]">*</span>
           </label>
           <input
-            id="email"
             type="email"
-            name="Email address"
+            name="Email"
             required
-            className="w-full rounded-2xl border border-[#d6d6d1] bg-[#fafaf8] px-4 py-3 text-sm outline-none transition focus:border-[#c99a31] focus:ring-2 focus:ring-[#c99a31]/20"
-            placeholder="Enter your email address"
+            className="w-full rounded-2xl border border-[#d6d6d1] bg-[#fafaf8] px-4 py-3 text-sm"
           />
         </div>
 
+        {/* Phone */}
         <div>
-          <label htmlFor="contact" className="mb-2 block text-sm font-medium text-[#1a1a1a]">
+          <label className="mb-2 block text-sm font-medium">
             Contact number <span className="text-[#c99a31]">*</span>
           </label>
           <input
-            id="contact"
             type="tel"
-            name="Contact number"
+            name="Phone"
             required
-            className="w-full rounded-2xl border border-[#d6d6d1] bg-[#fafaf8] px-4 py-3 text-sm outline-none transition focus:border-[#c99a31] focus:ring-2 focus:ring-[#c99a31]/20"
-            placeholder="Enter your contact number"
+            className="w-full rounded-2xl border border-[#d6d6d1] bg-[#fafaf8] px-4 py-3 text-sm"
           />
         </div>
 
+        {/* Early access */}
         <fieldset>
-          <legend className="mb-3 block text-sm font-medium text-[#1a1a1a]">
-            Would you like early access before the public launch?{' '}
-            <span className="text-[#c99a31]">*</span>
+          <legend className="mb-3 text-sm font-medium">
+            Would you like early access before launch? <span className="text-[#c99a31]">*</span>
           </legend>
           <div className="grid gap-3 sm:grid-cols-2">
-            <label className="flex cursor-pointer items-center gap-3 rounded-2xl border border-[#d6d6d1] bg-[#fafaf8] px-4 py-3 text-sm transition hover:border-[#c99a31]">
-              <input type="radio" name="Early access" value="No" required className="h-4 w-4" />
-              <span>No</span>
+            <label className="flex items-center gap-3 rounded-2xl border px-4 py-3">
+              <input type="radio" name="Early Access" value="No" required />
+              No
             </label>
-            <label className="flex cursor-pointer items-center gap-3 rounded-2xl border border-[#d6d6d1] bg-[#fafaf8] px-4 py-3 text-sm transition hover:border-[#c99a31]">
-              <input type="radio" name="Early access" value="Yes" required className="h-4 w-4" />
-              <span>Yes</span>
+            <label className="flex items-center gap-3 rounded-2xl border px-4 py-3">
+              <input type="radio" name="Early Access" value="Yes" required />
+              Yes
             </label>
           </div>
         </fieldset>
 
         <input type="hidden" name="_subject" value="New Luxsal waitlist signup" />
-        <input type="hidden" name="_captcha" value="false" />
 
         <button
           type="submit"
-          className="w-full rounded-2xl bg-[#111111] px-5 py-3.5 text-sm font-semibold text-white transition hover:bg-[#c99a31]"
+          className="w-full rounded-2xl bg-[#111111] px-5 py-3.5 text-white hover:bg-[#c99a31]"
         >
           Join Waitlist
         </button>
-
-        
       </form>
     </div>
   );
